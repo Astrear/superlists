@@ -26,7 +26,9 @@ SECRET_KEY = '1c34yv#w79s$1$(jd&k#&05(qen_nu+u5e96v78r(%=j-3yl7('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'superlists-wolf.herokuapp.com',
+]
 
 
 # Application definition
@@ -131,3 +133,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
